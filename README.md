@@ -1,2 +1,2 @@
-# mediPoint-hospital
+# mediBook-hospital
  A sample hospital webpage created using MEAN stack.
