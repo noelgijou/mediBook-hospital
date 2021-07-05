@@ -96,7 +96,18 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "login/vendor/jquery/jquery-3.2.1.min.js",
+              "login/vendor/animsition/js/animsition.min.js",
+              "login/vendor/bootstrap/js/popper.js",
+              "login/vendor/bootstrap/js/bootstrap.min.js",
+              "login/vendor/select2/select2.min.js",
+              "login/vendor/daterangepicker/moment.min.js",
+              "login/vendor/daterangepicker/daterangepicker.js",
+              "login/vendor/countdowntime/countdowntime.js",
+              "login/js/main.js"
+
+            ]
           }
         }
       }
