@@ -11,6 +11,10 @@ import { SignupComponent } from './signup/signup.component';
 import { PatienthomeComponent } from './patienthome/patienthome.component';
 import { DoctorhomeComponent } from './doctorhome/doctorhome.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
+import { PatientprofileComponent } from './patientprofile/patientprofile.component';
+import { AppointmentsComponent } from './appointments/appointments.component';
+import { MyrecordsComponent } from './myrecords/myrecords.component';
+import { BookappointComponent } from './bookappoint/bookappoint.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { AdminhomeComponent } from './adminhome/adminhome.component';
     SignupComponent,
     PatienthomeComponent,
     DoctorhomeComponent,
-    AdminhomeComponent
+    AdminhomeComponent,
+    PatientprofileComponent,
+    AppointmentsComponent,
+    MyrecordsComponent,
+    BookappointComponent
   ],
   imports: [
     BrowserModule,
