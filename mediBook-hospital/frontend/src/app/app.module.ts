@@ -15,6 +15,8 @@ import { PatientprofileComponent } from './patientprofile/patientprofile.compone
 import { AppointmentsComponent } from './appointments/appointments.component';
 import { MyrecordsComponent } from './myrecords/myrecords.component';
 import { BookappointComponent } from './bookappoint/bookappoint.component';
+import { UsermenuComponent } from './usermenu/usermenu.component';
+import { MenuheaderComponent } from './menuheader/menuheader.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { BookappointComponent } from './bookappoint/bookappoint.component';
     PatientprofileComponent,
     AppointmentsComponent,
     MyrecordsComponent,
-    BookappointComponent
+    BookappointComponent,
+    UsermenuComponent,
+    MenuheaderComponent
   ],
   imports: [
     BrowserModule,
