@@ -1,12 +1,8 @@
 const express = require('express');
 const app = express();
 
-<<<<<<< Updated upstream
-=======
-const mongoose = require('./database/mongoose');
+const mongoose =require('./database/mongoose');
 
-
->>>>>>> Stashed changes
 app.get('/', function(req,res){
     res.send("You're not supposed to be here!!")
 });
