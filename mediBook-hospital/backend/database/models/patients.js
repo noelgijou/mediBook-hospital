@@ -1,13 +1,29 @@
 const mongoose = require('mongoose');
 
 const patSchema = new mongoose.Schema({
-    Name:{
+    mail:{
         type: String,
         trim: true,
         minLength:3
     },
-    Age:{
+    name:{
+        type: String,
+        trim: true,
+        minLength:3
+    },
+    age:{
         type: Number
+    },
+    phone:{
+        type: Number
+    },
+    gender:{
+        type: String,
+        trim: true,
+        minLength:3
+    },
+    medHistory:{
+        type: Object
     }
 });
 
