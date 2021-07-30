@@ -17,6 +17,7 @@ import { MyrecordsComponent } from './myrecords/myrecords.component';
 import { BookappointComponent } from './bookappoint/bookappoint.component';
 import { UsermenuComponent } from './usermenu/usermenu.component';
 import { MenuheaderComponent } from './menuheader/menuheader.component';
+import {FormsModule, NgForm} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MenuheaderComponent } from './menuheader/menuheader.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,12 @@
-.leftpart{
+/* .leftpart{
     float: left;
     
+} */
+#heig{
+    height: 200px;
+
+}
+.testclass{
+    margin:2%;
+    margin-left: 400px;
 }
