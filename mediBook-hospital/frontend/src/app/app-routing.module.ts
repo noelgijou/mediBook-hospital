@@ -19,8 +19,7 @@ children:[
   {path:'appointments',component:AppointmentsComponent},
   {path:'myrecords',component:MyrecordsComponent},
   {path:'bookappoint',component:BookappointComponent}
-]},
-
+]}
 ];
 
 @NgModule({
