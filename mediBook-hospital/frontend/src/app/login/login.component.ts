@@ -17,6 +17,12 @@ import { Component, OnInit } from '@angular/core';
   './vendor/daterangepicker/daterangepicker.css']
 })
 export class LoginComponent implements OnInit {
+  User={username:'',
+        password:''};
+        userVerify()
+        {
+          alert("Successful Login")
+        }
 
   constructor() { }
 
