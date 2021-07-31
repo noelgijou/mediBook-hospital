@@ -22,6 +22,11 @@ const patSchema = new mongoose.Schema({
         trim: true,
         minLength:3
     },
+    bloodgrp:{
+        type:String,
+        trim: true,
+        minLength:2
+    },
     medHistory:{
         type: Object
     }

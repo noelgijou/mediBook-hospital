@@ -6,7 +6,10 @@ const docSchema = new mongoose.Schema({
         trim: true,
         minLength:3
     },
-    
+    spec:{
+        type: String,
+        minLength:3
+    }
 });
 
 const docs = mongoose.model('docs', docSchema);
