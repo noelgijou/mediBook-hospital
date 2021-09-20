@@ -9,17 +9,21 @@
                     <!-- <i class="zmdi zmdi-font"></i> -->
                 </span>
 
-                <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-                    <input class="input100" type="text" name="email" [(ngModel)]="User.username" required #email="ngModel" [class.is-invalid]="email.invalid && email.touched" pattern=" /^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\. [a-zA-Z0-9-]+)*$/">
+                <div class="wrap-input100 validate-input" > <!--data-validate = "Valid email is: a@b.c"-->
+                    <input class="input100" type="email" name="username" [(ngModel)]="User.username" required #username="ngModel" pattern="^[a-z0-9.%+]+@[a-z0-9.-]+\.[a-z]{2,4}">
                     <span class="focus-input100" data-placeholder="Email"></span>
-                    <small class="text-danger" [class.d-none]="email.valid || email.touched">Enter valid email</small>
+                    <!-- <small class="text-danger" [class.d-none]="email.invalid || email.touched">Enter valid email</small> -->
                 </div>
+
+                    <!-- <div>touched:{{password.touched}}</div>
+                    <div>dirty:{{username.dirty}}</div>
+                    <div>valid:{{username.valid}}</div> -->
 
                 <div class="wrap-input100 validate-input" data-validate="Enter password">
                     <span class="btn-show-pass">
                         <i class="zmdi zmdi-eye"></i>
                     </span>
-                    <input class="input100" type="password" name="pass" [(ngModel)]="User.password" required minlength="6">
+                    <input class="input100" type="password" name="password" [(ngModel)]="User.password" required minlength="6" #password="ngModel">
                     <span class="focus-input100" data-placeholder="Password"></span>
                 </div>
 
@@ -50,19 +54,19 @@
 <div id="dropDownSelect1"></div>
 
 
+<!-- =============================================================================================== -->
+<!-- <script src="login/vendor/jquery/jquery-3.2.1.min.js"></script> -->
+<!--=============================================================================================== -->
+<!-- <script src="login/vendor/animsition/js/animsition.min.js"></script> -->
 <!--===============================================================================================-->
-<script src="login/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!-- <script src="login/vendor/bootstrap/js/popper.js"></script>
+<script src="login/vendor/bootstrap/js/bootstrap.min.js"></script> -->
 <!--===============================================================================================-->
-<script src="login/vendor/animsition/js/animsition.min.js"></script>
+<!-- <script src="login/vendor/select2/select2.min.js"></script> -->
 <!--===============================================================================================-->
-<script src="login/vendor/bootstrap/js/popper.js"></script>
-<script src="login/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!-- <script src="login/vendor/daterangepicker/moment.min.js"></script>
+<script src="login/vendor/daterangepicker/daterangepicker.js"></script> -->
 <!--===============================================================================================-->
-<script src="login/vendor/select2/select2.min.js"></script>
+<!-- <script src="login/vendor/countdowntime/countdowntime.js"></script> -->
 <!--===============================================================================================-->
-<script src="login/vendor/daterangepicker/moment.min.js"></script>
-<script src="login/vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-<script src="login/vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-<script src="login/js/main.js"></script>
+<!-- <script src="login/js/main.js"></script> -->
