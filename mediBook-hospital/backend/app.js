@@ -9,4 +9,13 @@ app.use((req, res, next)=>{
     next();
 });
 
+app.post('/usermenu',(req,res)=>{
+    var flag = 0;
+});
+
+app.get('/usermenu',(req,res)=>{
+});
+
+app.post('/login',(req,res)=>{
+});
 app.listen(3000, ()=> console.log('Server connected- Express up and running'));
