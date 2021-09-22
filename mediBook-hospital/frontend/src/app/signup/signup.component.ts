@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+
+import { MustMatch } from '../must-match.validator';
+// import { ConfirmedValidator } from '../confirmed.validator';
 
 @Component({
   selector: 'app-signup',
@@ -15,11 +19,38 @@ import { Component, OnInit } from '@angular/core';
   './vendor/select2/select2.min.css',
   './vendor/daterangepicker/daterangepicker.css']
 })
-export class SignupComponent implements OnInit {
 
-  constructor() { }
+export class SignupComponent implements OnInit{
+  
+  
+  registerForm: FormGroup = new FormGroup({});
+  // registerForm: FormGroup;
+  submitted=false;
+  constructor(private fb: FormBuilder) { }
 
-  ngOnInit(): void {
+
+  ngOnInit(){
+    this.registerForm=this.fb.group({
+      email:['',[Validators.required],[Validators.email]],
+      password:['',[Validators.minLength(6)]],
+      confirmpassword:[''],
+      gender:['',[Validators.required]],
+      phone:['',[Validators.required]]
+
+    },{
+      validator: MustMatch('password','confirmpassword')
+    });
+
   }
+  get f(){
 
+    return this.registerForm.controls;
+
+  }
+  submit(){
+    this.submitted=true;
+
+    console.log(this.registerForm.value);
+
+  }
 }
