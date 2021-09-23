@@ -18,7 +18,6 @@ import { MyrecordsComponent } from './myrecords/myrecords.component';
 import { BookappointComponent } from './bookappoint/bookappoint.component';
 import { UsermenuComponent } from './usermenu/usermenu.component';
 import { MenuheaderComponent } from './menuheader/menuheader.component';
-
 import { FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './auth.service';
