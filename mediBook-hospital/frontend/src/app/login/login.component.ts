@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+// import { runInThisContext } from 'vm';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -29,7 +31,7 @@ export class LoginComponent implements OnInit {
           this.loginUser()
         }
 
-  constructor(private _auth:AuthService) { }
+  constructor(private _auth:AuthService, private _router: Router) { }
 
   ngOnInit(): void {
   }
@@ -38,8 +40,14 @@ export class LoginComponent implements OnInit {
   loginUser(){
     console.log("reached loginuser at login.component")
     // console.log(this.User)
-    this._auth.loginUser(this.User).subscribe(data=>{this.accountobj=data;alert(this.accountobj);});
-    // this._auth.loginUser(this.User)
+    // this._auth.loginUser(this.User).subscribe(data=>{this.accountobj=data;alert(this.accountobj);});
+    this._auth.loginUser(this.User)
+    .subscribe(
+      res=>{
+      localStorage.setItem('token',res.token)
+      this._router.navigate(['usermenu'])
+
+    })
   }
 
 }

@@ -3,6 +3,8 @@ const express = require('express');
 const app = express();
 const mongoose =require('./database/mongoose');
 
+const jwt=require('jsonwebtoken');
+
 username="noelgijou@gmail.com"
 password="123456"
 
@@ -42,7 +44,9 @@ app.post('/login',(req,res)=>{
         }
         else{
             console.log("login okay aavum")
-            res.status(200).send()
+            let payload={subject:username+password}
+            let token=jwt.sign(payload,'secretKey')
+            res.status(200).send({token})
         }
     }
 });
