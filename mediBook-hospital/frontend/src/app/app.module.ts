@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,9 +18,11 @@ import { MyrecordsComponent } from './myrecords/myrecords.component';
 import { BookappointComponent } from './bookappoint/bookappoint.component';
 import { UsermenuComponent } from './usermenu/usermenu.component';
 import { MenuheaderComponent } from './menuheader/menuheader.component';
-import {FormsModule} from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { AuthService } from './auth.service';
+import { ContactusComponent } from './contactus/contactus.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,15 +39,18 @@ import { ReactiveFormsModule } from '@angular/forms';
     MyrecordsComponent,
     BookappointComponent,
     UsermenuComponent,
-    MenuheaderComponent
+    MenuheaderComponent,
+    ContactusComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

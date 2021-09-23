@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 
 @Component({
@@ -22,11 +23,23 @@ export class LoginComponent implements OnInit {
         userVerify()
         {
           alert("Successful Login")
+          // console.log("logincomponent")
+          alert(this.User.username)
+          alert(this.User.password)
+          this.loginUser()
         }
 
-  constructor() { }
+  constructor(private _auth:AuthService) { }
 
   ngOnInit(): void {
+  }
+
+  accountobj:any
+  loginUser(){
+    console.log("reached loginuser at login.component")
+    // console.log(this.User)
+    this._auth.loginUser(this.User).subscribe(data=>{this.accountobj=data;alert(this.accountobj);});
+    // this._auth.loginUser(this.User)
   }
 
 }
