@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutusComponent } from './aboutus/aboutus.component';
 import { AppointmentsComponent } from './appointments/appointments.component';
 import { BookappointComponent } from './bookappoint/bookappoint.component';
+import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MyrecordsComponent } from './myrecords/myrecords.component';
@@ -13,6 +15,8 @@ const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
+  {path:'contactus',component:ContactusComponent},
+  {path:'aboutus',component:AboutusComponent},
   {path:'usermenu',component:UsermenuComponent,
 children:[
   {path:'',component:PatientprofileComponent},
