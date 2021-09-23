@@ -29,7 +29,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              
+            ]
           },
           "configurations": {
             "production": {
@@ -106,6 +108,7 @@
               "login/vendor/daterangepicker/daterangepicker.js",
               "login/vendor/countdowntime/countdowntime.js",
               "login/js/main.js"
+
 
             ]
           }

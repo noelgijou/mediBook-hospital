@@ -2,13 +2,24 @@
     <div>
         <div class="leftpart">
             <label>Date:</label>
-            <input type="text"><br>
+            <input type="date"><br>
             <label>Doctor:</label>
-            <input type="text">
-            <label>Department:</label>
             <input type="text"><br>
+            <label>Department :</label>
+                    <select name="gender" id="gender" formControlName="gender">
+                        <option value="Cardiology">Cardiology</option>
+                        <option value="Physiology">Physiology</option>
+                        <option value="Neurology">Neurology</option>
+                        <option value="General Surgery">General Surgery</option>
+                        <option value="Gastroentrology">Gastroentrology</option>
+                        <option value="Urology">Urology</option>
+                        <option value="ENT">ENT</option>
+                        <option value="Pulmonology">Pulmonology</option>
+                        <option value="Oncology">Oncology</option>
+                        <option value="Ophthalmology">Ophthalmology</option>
+                    </select>
         </div>
-        <input type="submit" value="Book Now">
+        <input type="submit" class="btn btn-outline-primary" value="Book Now">
     </div>
     <div class="vl"></div>
     <div class="prevappo">

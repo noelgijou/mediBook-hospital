@@ -11,13 +11,15 @@ import { PatientprofileComponent } from './patientprofile/patientprofile.compone
 import { SignupComponent } from './signup/signup.component';
 import { UsermenuComponent } from './usermenu/usermenu.component';
 
+import { AuthGuard } from './auth.guard';
+
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'contactus',component:ContactusComponent},
   {path:'aboutus',component:AboutusComponent},
-  {path:'usermenu',component:UsermenuComponent,
+  {path:'usermenu',canActivate:[AuthGuard],component:UsermenuComponent,
 children:[
   {path:'',component:PatientprofileComponent},
   {path:'appointments',component:AppointmentsComponent},

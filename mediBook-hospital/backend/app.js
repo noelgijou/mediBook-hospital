@@ -44,7 +44,7 @@ app.post('/login',(req,res)=>{
         }
         else{
             console.log("login okay aavum")
-            let payload={subject:username+password}
+            let payload={subject:username+password,user:username}
             let token=jwt.sign(payload,'secretKey')
             res.status(200).send({token})
         }

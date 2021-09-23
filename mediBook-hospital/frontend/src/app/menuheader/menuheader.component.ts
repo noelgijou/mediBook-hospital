@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-menuheader',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuheaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _auth:AuthService,private _router:Router) { }
+  logoutUser(){
+    localStorage.removeItem('token')
+  }
 
   ngOnInit(): void {
   }

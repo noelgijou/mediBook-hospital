@@ -17,4 +17,13 @@ export class AuthService {
   }
 
   constructor(private http:HttpClient) { }
+
+  loggedIn()
+{
+  return !!localStorage.getItem('token')
 }
+
+
+
+}
+
