@@ -2,8 +2,8 @@
     height: 800px;
 } */
 app-footer {
-    position:sticky;
-    bottom:0;
+    /* position:absolute; */
+    /* bottom:0; */
     width: 100%;
  }
  /* app-header{

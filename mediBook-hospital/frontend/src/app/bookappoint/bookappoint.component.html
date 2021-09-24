@@ -1,11 +1,29 @@
 <div>
-    <div>
+    <!-- <div class="bookingpart">
         <div class="leftpart">
-            <label>Date:</label>
-            <input type="date"><br>
-            <label>Doctor:</label>
-            <input type="text"><br>
-            <label>Department :</label>
+            <div class="space">
+                <label>Date:</label>
+                <input type="date"><br>
+            </div>
+            <div class="space">
+            <label>Doctor :</label>
+            
+            <select name="doctor" id="doctor" formControlName="doctor">
+                <option value="Dr.Venu">Dr.Venu</option>
+                <option value="Dr.Mary">Dr.Mary</option>
+                <option value="Dr.Nazeer">Dr.Nazeer</option>
+                <option value="Dr.Sheela">Dr.Sheela</option>
+                <option value="Dr.Tom">Dr.Tom</option>
+                <option value="Dr.Thara">Dr.Thara</option>
+                <option value="Dr.Newton">Dr.Newton</option>
+                <option value="Dr.Rahul">Dr.Rahul</option>
+                <option value="Dr.Fathima">Dr.Fathima</option>
+                <option value="Dr.Venkat">Dr.Venkat</option>
+            </select><br>
+            </div>
+
+            <div class="space">
+                <label>Department :</label>
                     <select name="gender" id="gender" formControlName="gender">
                         <option value="Cardiology">Cardiology</option>
                         <option value="Physiology">Physiology</option>
@@ -18,10 +36,47 @@
                         <option value="Oncology">Oncology</option>
                         <option value="Ophthalmology">Ophthalmology</option>
                     </select>
+
+            </div>
+            
+            
         </div>
-        <input type="submit" class="btn btn-outline-primary" value="Book Now">
-    </div>
-    <div class="vl"></div>
+        <input type="submit" class="btn btn-outline-primary space" value="Book Now">
+    </div> -->
+    <form>
+        <label class="siz">Date:</label>      
+        <input name="name" type="date" class="feedback-input" placeholder="Name" />  
+        <label class="siz">Doctor :</label> 
+        <!-- <input name="email" type="text" class="feedback-input" placeholder="Email" /> -->
+        <select name="doctor" id="doctor" class="feedback-input" formControlName="doctor">
+            <option value="Dr.Venu">Dr.Venu</option>
+            <option value="Dr.Mary">Dr.Mary</option>
+            <option value="Dr.Nazeer">Dr.Nazeer</option>
+            <option value="Dr.Sheela">Dr.Sheela</option>
+            <option value="Dr.Tom">Dr.Tom</option>
+            <option value="Dr.Thara">Dr.Thara</option>
+            <option value="Dr.Newton">Dr.Newton</option>
+            <option value="Dr.Rahul">Dr.Rahul</option>
+            <option value="Dr.Fathima">Dr.Fathima</option>
+            <option value="Dr.Venkat">Dr.Venkat</option>
+        </select>
+        <label class="siz">Department :</label>
+        <!-- <textarea name="text" class="feedback-input" placeholder="Comment"></textarea> -->
+                <select name="gender" id="department" class="feedback-input" formControlName="gender">
+                    <option value="Cardiology">Cardiology</option>
+                    <option value="Physiology">Physiology</option>
+                    <option value="Neurology">Neurology</option>
+                    <option value="General Surgery">General Surgery</option>
+                    <option value="Gastroentrology">Gastroentrology</option>
+                    <option value="Urology">Urology</option>
+                    <option value="ENT">ENT</option>
+                    <option value="Pulmonology">Pulmonology</option>
+                    <option value="Oncology">Oncology</option>
+                    <option value="Ophthalmology">Ophthalmology</option>
+                </select>
+        <input type="submit" value="Book Now"/>
+      </form>
+    <!-- <div class="vl"></div> -->
     <div class="prevappo">
         <div class="card w-50">
             <div class="card-body">
