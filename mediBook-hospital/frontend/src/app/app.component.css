@@ -9,3 +9,13 @@ app-footer {
  /* app-header{
      margin-bottom:0;
  } */
+ .mainbod{
+     margin:0;
+     padding:0;
+     min-height: 74vh;
+ }
+ .heaa{
+    margin:0;
+ }
+
+ @import '~ngx-toastr/toastr';

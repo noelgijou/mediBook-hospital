@@ -6,6 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bookappoint.component.css']
 })
 export class BookappointComponent implements OnInit {
+  Doctor={
+    date:'',
+    doctorname:'',
+    doctortype:''
+  };
+  bookNow(){
+          alert("Successful Login")
+          // console.log("logincomponent")
+          // alert(this.Doctor.date)
+          // alert(this.Doctor.doctorname)
+          console.log(this.Doctor)
+
+  }
 
   constructor() { }
 

@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
+import { UserModel } from './user.model';
+import { ToastrService } from 'ngx-toastr';
 
-import { MustMatch } from '../must-match.validator';
+// import { MustMatch } from '../must-match.validator';
 // import { ConfirmedValidator } from '../confirmed.validator';
 
 @Component({
@@ -23,34 +27,42 @@ import { MustMatch } from '../must-match.validator';
 export class SignupComponent implements OnInit{
   
   
-  registerForm: FormGroup = new FormGroup({});
+  // registerForm: FormGroup = new FormGroup({});
   // registerForm: FormGroup;
-  submitted=false;
-  constructor(private fb: FormBuilder) { }
+  // submitted=false;
+  constructor(private fb: FormBuilder,private authService:AuthService,private router:Router,private _toastr:ToastrService) { }
 
-
+  registerForm={
+    name:'',
+    mail:'',
+    password:'',
+    phone:'',
+    gender:''
+  }
   ngOnInit(){
-    this.registerForm=this.fb.group({
-      email:['',[Validators.required],[Validators.email]],
-      password:['',[Validators.minLength(6)]],
-      confirmpassword:[''],
-      gender:['',[Validators.required]],
-      phone:['',[Validators.required]]
+    // this.registerForm=this.fb.group({
+    //   email:['',[Validators.required],[Validators.email]],
+    //   password:['',[Validators.minLength(6)]],
+    //   confirmpassword:[''],
+    //   gender:['',[Validators.required]],
+    //   phone:['',[Validators.required]]
 
-    },{
-      validator: MustMatch('password','confirmpassword')
-    });
-
-  }
-  get f(){
-
-    return this.registerForm.controls;
+    // },{
+    //   validator: MustMatch('password','confirmpassword')
+    // });
 
   }
-  submit(){
-    this.submitted=true;
+  // get f(){
 
-    console.log(this.registerForm.value);
+  //   return this.registerForm.controls;
+
+  // }
+  adduser(){
+   
+    this.authService.newUser(this.registerForm);
+    alert("Success");
+    this.router.navigate(['/login']);
 
   }
+
 }

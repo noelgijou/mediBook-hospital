@@ -23,6 +23,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './auth.service';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {CommonModule} from '@angular/common';
+import { ToastrModule } from 'ngx-toastr';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +55,11 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    CommonModule,
+    ToastrModule.forRoot()
+
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

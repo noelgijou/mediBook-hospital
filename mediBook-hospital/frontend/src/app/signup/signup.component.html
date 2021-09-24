@@ -1,7 +1,9 @@
 <!-- <div class="limiter"> -->
     <!-- <div class="container-login100"> -->
         <div class="wrap-login100" style="margin:0 auto;">
-            <form class="login100-form validate-form" [formGroup]="registerForm" (ngSubmit)="submit()">
+            <!-- <form class="login100-form validate-form" [formGroup]="registerForm" (ngSubmit)="adduser()"> -->
+            <form class="login100-form validate-form" (ngSubmit)="adduser()">
+
                 <span class="login100-form-title p-b-26">
                     Welcome to Medibook
                 </span>
@@ -10,7 +12,12 @@
                 </span> -->
 
                 <div class="wrap-input100 validate-input" >
-                    <input class="input100" type="email" name="username" formControlName="email">
+                    <input class="input100" type="text" name="name" [(ngModel)]="registerForm.name">
+                    <span class="focus-input100" data-placeholder="Name"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" >
+                    <input class="input100" type="email" name="username" [(ngModel)]="registerForm.mail">
                     <span class="focus-input100" data-placeholder="Email"></span>
                 </div>
 
@@ -18,7 +25,7 @@
                     <span class="btn-show-pass">
                         <i class="zmdi zmdi-eye"></i>
                     </span>
-                    <input class="input100" type="password" formControlName="password">
+                    <input class="input100" type="password" name="password" [(ngModel)]="registerForm.password">
                     <span class="focus-input100" data-placeholder="Password"></span>
 
                 </div>
@@ -29,7 +36,7 @@
                     <span class="btn-show-pass">
                         <!-- <i class="zmdi zmdi-eye"></i> -->
                     </span>
-                    <input class="input100" type="password" name="confirmpassword" formControlName="confirmpassword">
+                    <input class="input100" type="password" name="confirmpassword">
                     <span class="focus-input100" data-placeholder="Re-enter Password"></span>
                 </div>
 
@@ -50,7 +57,7 @@
                 
                 <div>
                     <label>Select Gender :</label>
-                    <select name="gender" id="gender" formControlName="gender">
+                    <select name="gender" id="gender" [(ngModel)]="registerForm.gender">
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
@@ -58,7 +65,7 @@
                 
 
                 <div class="wrap-input100 validate-input" >
-                    <input class="input100" type="tel" name="phone" formControlName="phone">
+                    <input class="input100" type="tel" name="phone" [(ngModel)]="registerForm.phone">
                     <span class="focus-input100" data-placeholder="Phone"></span>
                 </div>
 
@@ -75,7 +82,6 @@
                         </button>
                     </div>
                 </div>
-
                 <div class="text-center p-t-115">
                     <span class="txt1">
                         Already have an account?

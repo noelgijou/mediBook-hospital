@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // import { runInThisContext } from 'vm';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -20,18 +21,18 @@ import { Router } from '@angular/router';
   './vendor/daterangepicker/daterangepicker.css']
 })
 export class LoginComponent implements OnInit {
-  User={username:'',
+  User={mail:'',
         password:''};
         userVerify()
         {
-          alert("Successful Login")
+          // alert("Successful Login")
           // console.log("logincomponent")
-          alert(this.User.username)
-          alert(this.User.password)
+          // alert(this.User.mail)
+          // alert(this.User.password)
           this.loginUser()
         }
 
-  constructor(private _auth:AuthService, private _router: Router) { }
+  constructor(private _auth:AuthService, private _router: Router,private _toastr:ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -44,10 +45,14 @@ export class LoginComponent implements OnInit {
     this._auth.loginUser(this.User)
     .subscribe(
       res=>{
+        // if(!res.token){
+        //   this._toastr.error("Login Failed")
+
+        // }
       localStorage.setItem('token',res.token)
+      this._toastr.success("Successfully logged in")
       this._router.navigate(['usermenu'])
 
     })
   }
-
 }
