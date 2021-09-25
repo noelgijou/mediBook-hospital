@@ -1,8 +1,11 @@
 .bottomhome{
     height: 600px;
-    background-color: rgba(184, 199, 48, 0.568);
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: auto;
+}
+.caro{
+    height:600px;
 }

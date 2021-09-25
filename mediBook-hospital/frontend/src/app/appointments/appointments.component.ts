@@ -6,12 +6,12 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./appointments.component.css']
 })
 export class AppointmentsComponent implements OnInit {
-bookdets=[{
-  _id:'',
-  date:"",
-  doctor:"",
-  doctortype:""
-}]
+  bookdets=[{
+    _id:'',
+    date:"",
+    doctor:"",
+    doctortype:""
+  }]
   constructor(private dataservice: AuthService) { }
 
   ngOnInit(): void {
@@ -21,18 +21,12 @@ bookdets=[{
       console.log(this.bookdets)
     })
   }
+
   del(id:any){
-    
-    
-  
     this.dataservice.del(id._id)
       .subscribe((data) => {
         this.bookdets = this.bookdets.filter(p => p !== id);
       })
-  
-
-  
-    
   }
 
 }

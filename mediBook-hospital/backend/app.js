@@ -7,6 +7,7 @@ const jwt=require('jsonwebtoken');
 const cors = require('cors');
 const Patients = require('./database/models/patients.js'); 
 const booknow = require('./database/models/book.js')
+const records = require('./database/models/records.js')
 username="noelgijou@gmail.com"
 password="123456"
 
@@ -156,6 +157,18 @@ app.get('/del/:id', (req, res) => {
             console.log('success')
             res.send();
         })
+})
+
+//getrecords
+app.get('/getrecords/:id',(req,res)=>{
+    id = req.params.id;
+    console.log("reached get records: ",id)
+
+    records.find({mail:id})
+    .then((value)=>{
+        res.send(value)
+        console.log(value)
+    })
 })
 
 app.listen(3000, ()=> console.log('Server connected- Express up and running'));

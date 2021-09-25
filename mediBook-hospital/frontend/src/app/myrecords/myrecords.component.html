@@ -1,7 +1,9 @@
-<div class="card w-25 space">
+<div class="d-flex flex-row justify-content-around">
+  <div class="card w-25 space" *ngFor="let rec of recdets">
     <div class="card-body">
-      <h5 class="card-title">Record Name</h5>
-      <p class="card-text">Record Date: <br> Details:</p>
+      <h5 class="card-title">{{rec.name}}</h5>
+      <p class="card-text">Date: {{rec.date}}<br> Details: {{rec.details}}</p>
       <a href="#" class="btn btn-primary">View Details</a>
     </div>
+  </div>
 </div>

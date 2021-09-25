@@ -11,11 +11,13 @@
         </div>
     </div>
 </div> -->
-<div class="card w-25 space" *ngFor="let bookdet of bookdets">
-  <div class="card-body">
-    <h5 class="card-title" >{{bookdet.date}}</h5>
-    <p class="card-text">Doctor name: {{bookdet.doctor}}<br> {{bookdet.doctortype}}</p>
-    <!-- <a href="#" class="btn btn-primary">Button</a> -->
-    <button class="btn btn-primary" (click)="del(bookdet)">Cancel</button>
+<div class="d-flex flex-row justify-content-around">
+  <div class="card w-25 space" *ngFor="let bookdet of bookdets">
+    <div class="card-body">
+      <h5 class="card-title">{{bookdet.date}}</h5>
+      <p class="card-text">Doctor name: {{bookdet.doctor}}<br> {{bookdet.doctortype}}</p>
+      <!-- <a href="#" class="btn btn-primary">Button</a> -->
+      <button class="btn btn-primary" (click)="del(bookdet)">Cancel Appointment</button>
+    </div>
   </div>
 </div>

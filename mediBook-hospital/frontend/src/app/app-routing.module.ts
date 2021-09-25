@@ -22,6 +22,7 @@ const routes: Routes = [
   {path:'usermenu',canActivate:[AuthGuard],component:UsermenuComponent,
 children:[
   {path:'',component:PatientprofileComponent},
+  {path:'patientprofile',component:PatientprofileComponent},
   {path:'appointments',component:AppointmentsComponent},
   {path:'myrecords',component:MyrecordsComponent},
   {path:'bookappoint',component:BookappointComponent}

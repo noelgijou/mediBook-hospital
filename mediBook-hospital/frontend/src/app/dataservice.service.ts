@@ -22,4 +22,8 @@ export class DataserviceService {
   update(id:any){
     return this.http.put("http://localhost:3000/update" , id).subscribe(data =>{console.log(data)})
   }
+
+  getrecords(id:any){
+    return this.http.get("http://localhost:3000/getrecords/" + id)
+  }
 }
