@@ -22,16 +22,27 @@ export class AuthService {
   constructor(private http:HttpClient) { }
 
   loggedIn()
-{
-  return !!localStorage.getItem('token')
+  {
+    return !!localStorage.getItem('token')
+  }
+  newUser(item: UserModel){
+    console.log("Auth User",item)
+    return this.http.post("http://localhost:3000/adduser",{"user":item})
+    .subscribe(data=>{console.log(data)})
+  }
+
+
+  book(item:any){
+    return this.http.post('http://localhost:3000/book',{"data": item})
+  }
+
+  getbook(id:any){
+    return this.http.get('http://localhost:3000/getbook/' + id )
+  }
+  del(id:any)
+  {
+
+    return this.http.get("http://localhost:3000/del/"+id)
+
+  }
 }
-newUser(item: UserModel){
-  console.log("Auth User",item)
-  return this.http.post("http://localhost:3000/adduser",{"user":item})
-  .subscribe(data=>{console.log(data)})
-}
-
-
-
-}
-

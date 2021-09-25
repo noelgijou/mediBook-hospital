@@ -12,6 +12,7 @@ export class MenuheaderComponent implements OnInit {
   constructor(private _auth:AuthService,private _router:Router) { }
   logoutUser(){
     localStorage.removeItem('token')
+    localStorage.removeItem('mail')
     this._router.navigate(['login'])
   }
 

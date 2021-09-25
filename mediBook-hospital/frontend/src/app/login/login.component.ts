@@ -50,6 +50,7 @@ export class LoginComponent implements OnInit {
 
         // }
       localStorage.setItem('token',res.token)
+      localStorage.setItem('mail',res.umail)
       this._toastr.success("Successfully logged in")
       this._router.navigate(['usermenu'])
 

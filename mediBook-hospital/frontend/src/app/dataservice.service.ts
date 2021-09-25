@@ -11,12 +11,15 @@ export class DataserviceService {
   //   return this.http.post("http://localhost:3000/addproduct",{"data":xyz})
   // }
   getdetails(xyz:any){
-    console.log("dataservices-get details", xyz)
-    return this.http.put("http://localhost:3000/getdetails",{"data":xyz})
+    // console.log("getting details of", xyz)
+    return this.http.get("http://localhost:3000/getdetails/" + xyz)
   }
 
   upp(xyz:any){
     console.log("dataservices", xyz)
     return this.http.put("http://localhost:3000/updetails",{"data":xyz})
+  }
+  update(id:any){
+    return this.http.put("http://localhost:3000/update" , id).subscribe(data =>{console.log(data)})
   }
 }

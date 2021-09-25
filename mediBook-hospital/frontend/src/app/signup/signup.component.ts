@@ -37,7 +37,9 @@ export class SignupComponent implements OnInit{
     mail:'',
     password:'',
     phone:'',
-    gender:''
+    gender:'',
+    age:'',
+    bloodgrp:''
   }
   ngOnInit(){
     // this.registerForm=this.fb.group({
